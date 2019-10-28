@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+</head>
+
+<body>
+    <div id="app">
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="./bookstore.jpg" width="30" height="30" class="d-inline-block align-top" alt="">UBIQUM
+                Bookstore
+            </a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" v-model="searchQuery" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+
+        <div class="main-body">
+            <div class="flip-card" v-for="book in filterSearch" v-for="book in books">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img :src="book.cover" :alt="book.detail" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>{{book.title}}</h1>
+                        <p>{{book.description}}</p>
+                        <button>More info</button>
+                        <a data-fancybox="gallery" :href="book.detail"><img src="small_2.jpg"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="card-footer text-muted">
+            2019 UBIQUM Bookstore | All Rights Reserved
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://api.myjson.com/bins/zyv02"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="./scripts/data.json"></script> -->
+    <script src="./scripts/vue.js"></script>
+</body>
+
+</html>
