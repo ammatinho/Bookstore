@@ -1,9 +1,13 @@
+//*** Vue.js ***/
+
 const app = new Vue({
     el: "#app",
     data: {
+        loading: true,
         books: [],
         searchQuery: "",
         apiUrl: "https://api.myjson.com/bins/zyv02",
+        message: "No results found. ",
     },
 
     created() {
@@ -14,7 +18,6 @@ const app = new Vue({
     methods: {
 
         async fetchData(apiUrl) {
-            // let apiUrl = this.apiUrl;
             this.books = await fetch(apiUrl, {
                     method: "GET",
                     dataType: "jsonp",
@@ -22,6 +25,7 @@ const app = new Vue({
                 .then(data => data.json())
                 .then(data => data.books)
                 .catch(error => console.log(error))
+                this.loading = false
             // books = await (books)
             // await (executeAfterFetch())
         }
@@ -44,7 +48,7 @@ const app = new Vue({
 
 
 
-
+//*** JavaScript ***/
 // let apiUrl = "https://api.myjson.com/bins/zyv02";
 
 // let books;
@@ -68,6 +72,3 @@ const app = new Vue({
 
 // // console.log('calles after', books)
 
-
-
-//v-for book in books

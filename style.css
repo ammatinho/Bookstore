@@ -1,13 +1,15 @@
-*{
+/* play with padding on .imgMessage class to fix page height issue */
+
+/* *{
   margin: 0;
   padding: 0;
-}
+} */
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    width: 302px;
+    height: 302px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     display: inline-table;
@@ -48,6 +50,7 @@
     background-color: black;;
     color: whitesmoke;
     transform: rotateY(180deg);
+    padding:3%;
   }
 
   .flip-card-back:hover{
@@ -60,6 +63,8 @@
   .footer{
     text-align: center;
     color: #6c757d!important;
+    position: relative;
+    bottom: 0%;
   }
 
   .p{
@@ -82,10 +87,67 @@
 .main-body{
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 7%;
+  min-height: 86vh; 
 }
+
+a{
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.message{
+  text-align: center;
+  color: black;
+  border-color: whitesmoke;
+  margin-top: 110%;
+  font-size: bold;
+  font-size: large;
+}
+
+.imgMessage{
+  margin-right: 5%;
+}
+
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+  margin-left: 45%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.lds-circle > div {
+  display: inline-block;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border-radius: 50%;
+  background: black;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes lds-circle {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+
+
 
 /* @media screen and (min-width: 480px) {
   #flip-card {width: 200px; float: left;}
