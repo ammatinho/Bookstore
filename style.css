@@ -1,10 +1,5 @@
 /* play with padding on .imgMessage class to fix page height issue */
 
-/* *{
-  margin: 0;
-  padding: 0;
-} */
-
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     background-color: transparent;
@@ -64,7 +59,7 @@
     text-align: center;
     color: #6c757d!important;
     position: relative;
-    bottom: 0%;
+    width: 100%;  
   }
 
   .p{
@@ -85,12 +80,13 @@
 }
 
 .main-body{
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 7%;
-  min-height: 86vh; 
+    margin: 0 auto;
+    /* display: flex; */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 7%;
+    padding-bottom: 10%;
+    min-height: 86vh;
 }
 
 a{
@@ -104,20 +100,21 @@ a{
   text-align: center;
   color: black;
   border-color: whitesmoke;
-  margin-top: 110%;
+  margin-top: 15%;
   font-size: bold;
   font-size: large;
 }
 
 .imgMessage{
-  margin-right: 5%;
+    margin-right: 6%;
+    margin-bottom: 2%;
 }
 
 .lds-circle {
   display: inline-block;
   transform: translateZ(1px);
   margin-left: 45%;
-  margin-top: 15%;
+  margin-top: 30%;
   margin-bottom: 15%;
 }
 
@@ -149,9 +146,9 @@ a{
 
 
 
-/* @media screen and (min-width: 480px) {
-  #flip-card {width: 200px; float: left;}
-} */
+@media screen and (min-width: 480px) {
+  #footer {width: 200px; float: left;}
+}
 
 
 

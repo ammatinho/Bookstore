@@ -15,7 +15,7 @@
     <script src="https://api.myjson.com/bins/zyv02"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- <script src="./scripts/data.json"></script> -->
-    
+
 
 </head>
 
@@ -31,9 +31,12 @@
                     aria-label="Search">
             </form>
         </nav>
-            
-        <div class="lds-circle" v-show="loading"><div></div></div>
-            <div class="main-body" v-show="!loading">
+
+        <div class="lds-circle" v-show="loading">
+            <div></div>
+        </div>
+        <div class="main-body" v-show="!loading">
+            <div>
                 <div class="flip-card" v-for="book in filterSearch" v-for="book in books">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -42,24 +45,25 @@
                         <div class="flip-card-back">
                             <h3>{{book.title}}</h3>
                             <p>{{book.description}}</p>
-                            <a data-fancybox="book" :href="book.detail"><button class="btn btn-outline-success my-2 my-sm-0">More info</button></a>
+                            <a data-fancybox="book" :href="book.detail"><button
+                                    class="btn btn-outline-success my-2 my-sm-0">More info</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="imgMessage" v-if="filterSearch.length == 0">
                     <div class="message"><img src="./noresults.jpg" width="50" height="50">{{ message }}</div>
                 </div>
-            </div>     
+            </div>
+        </div>
     </div>
-
-    <div class="footer" v-show="!loading">
-        <div class="card-footer text-muted">
-            2019 UBIQUM Bookstore | All Rights Reserved
-        </div>     
-    </div>
-    
 
     <script src="./scripts/vue.js"></script>
 </body>
+
+<div class="footer">
+    <div class="card-footer text-muted">
+        2019 UBIQUM Bookstore | All Rights Reserved
+    </div>
+</div>
 
 </html>
