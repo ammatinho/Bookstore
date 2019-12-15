@@ -1,4 +1,4 @@
-# Bookstore
+# { Bookstore }
 
 Created a Bookstore website for UBIQUM code academy - fliper books - with live data.
 
