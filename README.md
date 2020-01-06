@@ -1,6 +1,6 @@
 # { Bookstore }
 
-Created a Bookstore website for UBIQUM Code Academy - fliper books - with live data.
+Created a Bookstore website for UBIQUM Code Academy - flipper books - with live data.
 
 
 Visit my project here - https://ammatinho.github.io/Bookstore/
